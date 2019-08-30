@@ -69,16 +69,16 @@ public class A1Adept {
 			System.out.println("Smallest: " + first[0] + " " + last[0] + " " + "(" + String.format("%.2f", small) + ")");
 			System.out.println("Average: " + String.format("%.2f", average));
 			 
-		} else if (big == small) {
-			System.out.println("Biggest: " + first[1] + " " + last[1] + " " + "(" + String.format("%.2f", big) + ")");
-			System.out.println("Smallest: " + first[0] + " " + last[0] + " " + "(" + String.format("%.2f", small) + ")");
-			System.out.println("Average: " + String.format("%.2f", average));
-			
-		} else {
+		} else if (itemCount == 1 && prices[0] < .01) {
 		
-		System.out.println("Biggest: " + firstVar + " " + lastVar + " " + "(" + String.format("%.2f", big) + ")");
-		System.out.println("Smallest: " + firstSmall + " " + lastSmall + " " + "(" + String.format("%.2f", small) + ")");
+		System.out.println("Biggest: " + first[1] + " " + last[1] + " " + "(" + String.format("%.2f", big) + ")");
+		System.out.println("Smallest: " + first[0] + " " + last[0] + " " + "(" + String.format("%.2f", small) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
+		
+		} else {
+			System.out.println("Biggest: " + firstVar + " " + lastVar + " " + "(" + String.format("%.2f", big) + ")");
+			System.out.println("Smallest: " + firstSmall + " " + lastSmall + " " + "(" + String.format("%.2f", small) + ")");
+			System.out.println("Average: " + String.format("%.2f", average));
 		
 		};
 		
