@@ -64,13 +64,18 @@ public class A1Adept {
 		double small = getSmallest(totalArray, first, last);
 		double average = getAverage(totalArray, customerCount);
 		
-	
-		
-		
+		if (customerCount == 1) {
+			System.out.println("Biggest: " + first[0] + " " + last[0] + " " + "(" + String.format("%.2f", big) + ")");
+			System.out.println("Smallest: " + first[0] + " " + last[0] + " " + "(" + String.format("%.2f", small) + ")");
+			System.out.println("Average: " + String.format("%.2f", average));
+			 
+		} else {
 		
 		System.out.println("Biggest: " + firstVar + " " + lastVar + " " + "(" + String.format("%.2f", big) + ")");
 		System.out.println("Smallest: " + firstSmall + " " + lastSmall + " " + "(" + String.format("%.2f", small) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
+		
+		};
 		
 			
 
