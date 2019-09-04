@@ -30,14 +30,27 @@ public class A1Jedi {
 			String first = scan.next();
 			String last = scan.next();
 		    itemsBought[j] = scan.nextInt();
+		    boolean[] alreadyBought = new boolean[itemCount];
 			
 			for (int k=0; k<itemsBought[j]; k++) {
+				//boolean alreadyBought = false;
 				quantArray[k] = scan.nextInt();
 				itemName[k] = scan.next();
+				String[] checkItem = new String[itemsBought[j]];
 				
 				for (int l=0; l<itemCount; l++) {
-					if (itemName[k].equals(items[l])) {
+					checkItem[k] = itemName[k];
+					//for (int m=0; m<k; m++) {
+						//if (checkItem[m].equals(checkItem[k])) {
+													//} 
+					//}
+								
+					
+					if (itemName[k].equals(items[l]) ) {
+						if (!alreadyBought[l]) {
 						customerNumber[l]++;
+						alreadyBought[l] = true;
+						}
 						total[l] += quantArray[k];
 					}
 				}
